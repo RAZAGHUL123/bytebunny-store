@@ -39,6 +39,9 @@ function Header({ cartItems }) {
             <li className="nav-item">
               <Link className="nav-link" to="/catalog">Catalog</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">About</Link>
+            </li>
             <li className="nav-item position-relative">
               <Link className="nav-link" to="/cart">
                 Cart {cartCount > 0 && (
