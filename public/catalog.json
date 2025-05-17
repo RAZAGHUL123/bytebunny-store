@@ -60,7 +60,19 @@
   "rating": 4.2,
   "inStock": true,
   "disclosure": "Smell may leak through the screen. Flashbacks reported. Do not microwave under any circumstance."
+},
+{
+  "id": 6,
+  "name": "Bricked GIR (Unzipped)",
+  "price": 66.60,
+  "image": "/images/brickedgir.png",
+  "description": "Half-zipped with exposed robotics, this scorched GIR unit occasionally boots into gibberish mode. Once known for joy, now just static and glitch-smirks.",
+  "category": "Relic",
+  "rating": 4.9,
+  "inStock": true,
+  "disclosure": "May attempt to connect to local routers and rename them 'I AM TACO'. Emits corrupted startup sounds. Not legally recognized as a sentient device—but it knows your name."
 }
+
 
 
 
