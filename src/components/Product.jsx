@@ -27,9 +27,9 @@ function Product({ onAddToCart }) {
       <div className="row">
         <div className="col-md-6">
           <img
-  src={product.image}
-  alt={product.name}
-  className="product-image"
+            src={item.image}
+            alt={item.name}
+            className="product-image"
 />
 
         </div>
