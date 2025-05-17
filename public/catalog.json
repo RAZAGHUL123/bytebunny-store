@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "Reptar Mask (Used)",
+    "price": 44.99,
+    "image": "https://i.imgur.com/yourImage1.png",
+    "description": "Smells like raw plastic and regret. Breathing while wearing it triggers VHS distortion nearby.",
+    "category": "Costume",
+    "rating": 4.8,
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "name": "Courage's Collar (Bloodstained)",
+    "price": 32.00,
+    "image": "https://i.imgur.com/yourImage2.png",
+    "description": "Causes wearer to hear faint screams from the attic when alone.",
+    "category": "Accessory",
+    "rating": 5.0,
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "name": "Teeth Candle",
+    "price": 18.99,
+    "image": "https://i.imgur.com/yourImage3.png",
+    "description": "Made of wax and molars. Weeps during thunderstorms.",
+    "category": "Home Decor",
+    "rating": 4.2,
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "name": "Jawbox Plush",
+    "price": 27.50,
+    "image": "https://i.imgur.com/yourImage4.png",
+    "description": "Its jaw occasionally snaps shut when you're not looking.",
+    "category": "Toys",
+    "rating": 4.6,
+    "inStock": true
+  },
+  {
+  "id": 6,
+  "name": "Plank of Dread (Possessed)",
+  "price": 77.77,
+  "image": "/images/plankRalphsFriend.png",
+  "description": "An abandoned wooden plank found behind an old Courage-era property. Its carved face glows faintly with alchemical lines.",
+  "category": "Cursed Artifact",
+  "rating": 4.9,
+  "inStock": true,
+  "disclosure": "WARNING: This item may cause hallucinations, device screen flickering, or memory loops. BYTEBUNNY is not responsible for hauntings."
+},
+{
+  "id": 8,
+  "name": "McNasty Deluxe (Forgotten Commercial Prop)",
+  "price": 66.66,
+  "image": "/images/mcnasty_deluxe_rot.png",
+  "description": "A burger used in a banned Nickelodian promo reel in 2002. The lettuce moves when you stare too long. Thought to have been a crossover gag — until the ad was wiped from archives.",
+  "category": "Forbidden Food",
+  "rating": 4.2,
+  "inStock": true,
+  "disclosure": "Smell may leak through the screen. Flashbacks reported. Do not microwave under any circumstance."
+}
+
+
+
+]

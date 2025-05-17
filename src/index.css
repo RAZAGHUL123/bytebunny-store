@@ -1,0 +1,368 @@
+/* ------------------ */
+/* BYTEBUNNY THEME LAYER */
+/* ------------------ */
+
+body {
+  background-color: #0b0b0b;
+  color: #e4e4e4;
+  font-family: 'Orbitron', 'Avenir', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  display: block;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* Custom Header Title Glitch (optional effect) */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: red;
+  z-index: -1;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  animation: glitch 2s infinite linear alternate-reverse;
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -1px 0 blue;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: 1px 0 lime;
+}
+
+@keyframes glitch {
+  0% { clip: rect(0, 900px, 0, 0); }
+  10% { clip: rect(10px, 900px, 50px, 0); }
+  20% { clip: rect(85px, 900px, 140px, 0); }
+  40% { clip: rect(10px, 900px, 110px, 0); }
+  60% { clip: rect(65px, 900px, 190px, 0); }
+  80% { clip: rect(30px, 900px, 90px, 0); }
+  100% { clip: rect(0, 900px, 0, 0); }
+}
+
+/* CTA + Demonic Buttons */
+.btn-demonic {
+  background-color: #8b0000;
+  color: #fff;
+  border: 1px solid crimson;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 4px red;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+.btn-demonic:hover {
+  background-color: crimson;
+  box-shadow: 0 0 15px red;
+  transform: scale(1.05);
+}
+
+/* Links */
+a {
+  color: #ff6666;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff3333;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.06em;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #ff4444;
+}
+
+/* Footer */
+footer {
+  background-color: #0a0a0a;
+  color: #777;
+  font-size: 0.85rem;
+  padding: 2rem 1rem;
+  border-top: 1px solid #222;
+  text-align: center;
+}
+/* =============================== */
+/* === BYTEBUNNY HOME THEME ====== */
+/* =============================== */
+
+.home-hero {
+  background: radial-gradient(circle, #0b0b0b, #000);
+  color: #e4e4e4;
+  text-align: center;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo {
+  height: 120px;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 8px crimson);
+}
+
+/* Celtic Glitch Title */
+.glitch-title {
+  font-size: 3rem;
+  font-family: 'UnifrakturCook', 'Orbitron', serif;
+  letter-spacing: 0.15em;
+  color: red;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.glitch-title::before,
+.glitch-title::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: crimson;
+  opacity: 0.7;
+}
+
+.glitch-title::before {
+  top: -2px;
+  left: 2px;
+  color: #ff2222;
+  animation: glitch 2s infinite;
+}
+
+.glitch-title::after {
+  top: 2px;
+  left: -2px;
+  color: #ff6666;
+  animation: glitch 2.5s infinite;
+}
+
+@keyframes glitch {
+  0% { clip-path: inset(0 0 80% 0); }
+  25% { clip-path: inset(20% 0 50% 0); }
+  50% { clip-path: inset(30% 0 30% 0); }
+  75% { clip-path: inset(10% 0 40% 0); }
+  100% { clip-path: inset(0 0 80% 0); }
+}
+
+/* Subtext */
+.hero-subtext {
+  color: #999;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  font-family: 'Avenir', sans-serif;
+}
+
+/* CTA Button */
+.btn-demonic-cta {
+  background-color: #8b0000;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  border: 1px solid #ff0033;
+  box-shadow: 0 0 10px #ff0033;
+}
+
+.btn-demonic-cta:hover {
+  background-color: #ff0033;
+  box-shadow: 0 0 20px red;
+  color: #000;
+}
+.bytebunny-nav {
+  background-color: #0b0b0b;
+  border-bottom: 1px solid #330000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: 40px;
+  margin-right: 1rem;
+  filter: drop-shadow(0 0 4px crimson);
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-family: 'UnifrakturCook', 'Orbitron', serif;
+  color: #ff4444;
+  letter-spacing: 0.1em;
+}
+
+.nav-right ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #ccc;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: crimson;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff0033;
+  text-shadow: 0 0 5px red;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.btn-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  font-family: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  color: #ff0033;
+  text-shadow: 0 0 5px red;
+}
+.image-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+}
+
+.product-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain; /* or change to cover for full bleed */
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: crimson;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  box-shadow: 0 0 5px red;
+}
+/* =============================== */
+/* === PRODUCT PAGE CLEANUP ====== */
+/* =============================== */
+
+.product-page {
+  background-color: #0b0b0b;
+  color: #f1f1f1;
+  font-family: 'Avenir', sans-serif;
+  padding: 3rem 2rem;
+}
+
+.product-title {
+  font-size: 2.2rem;
+  color: #ff3c3c;
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 3px red;
+}
+
+.product-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #dddddd;
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.product-disclosure {
+  background: #1b1b1b;
+  padding: 1.2rem 1rem;
+  border-left: 5px solid crimson;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+  color: #ffe6e6;
+  margin-bottom: 2rem;
+  transition: background 0.3s ease;
+}
+
+.product-disclosure:hover {
+  background: #220000;
+  box-shadow: 0 0 15px crimson;
+}
+
+.product-disclosure h5 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #ff6666;
+  font-family: 'Orbitron', sans-serif;
+}
