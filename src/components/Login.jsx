@@ -1,49 +1,55 @@
+// src/pages/Login.jsx
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
-function Login({ onLogin }) {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+export default function Login() {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
 
-  const handleLogin = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (username === 'admin' && password === 'bytebunny') {
-      localStorage.setItem('auth', JSON.stringify({ username }));
-      onLogin(username);
-    } else {
-      alert('Denied. The demons don’t recognize your soul.');
-    }
+
+    // Fake login
+    localStorage.setItem('auth', JSON.stringify({ email }));
+    navigate('/dashboard');
   };
 
   return (
-    <section id="login" className="bg-black text-red-600 py-16">
-      <form
-        onSubmit={handleLogin}
-        className="max-w-md mx-auto bg-gray-900 p-6 rounded-lg shadow-md border border-red-800"
-      >
-        <h2 className="text-2xl mb-4 font-bold">Demonic Access Panel</h2>
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          className="w-full mb-3 p-2 bg-black border border-red-500 text-white"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="w-full mb-4 p-2 bg-black border border-red-500 text-white"
-        />
-        <button
-          type="submit"
-          className="w-full bg-red-700 hover:bg-red-900 text-white py-2 rounded"
-        >
-          🔐 Unlock
-        </button>
-      </form>
-    </section>
+    <div className="login-wrapper d-flex align-items-center justify-content-center min-vh-100">
+      <div className="login-card p-4 rounded shadow">
+        <h2 className="text-center text-glitch mb-4">BYTEBUNNY.GOV</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label className="form-label text-muted">Agent Email</label>
+            <input
+              type="email"
+              className="form-control bg-dark text-light border-danger"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              autoFocus
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label text-muted">Clearance Code</label>
+            <input
+              type="password"
+              className="form-control bg-dark text-light border-danger"
+              value={pass}
+              onChange={(e) => setPass(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="btn btn-danger w-100">
+            Authenticate
+          </button>
+        </form>
+        <p className="text-muted small mt-3 text-center">
+          Unauthorized use punishable by containment.
+        </p>
+      </div>
+    </div>
   );
 }
-
-export default Login;

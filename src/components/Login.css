@@ -1,0 +1,18 @@
+.login-wrapper {
+  background-color: #0b0b0b;
+  padding: 2rem;
+}
+
+.login-card {
+  background-color: #111111;
+  max-width: 350px;
+  width: 100%;
+  border: 1px solid red;
+}
+
+.text-glitch {
+  font-family: 'Orbitron', sans-serif;
+  color: red;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px red, 0 0 10px darkred;
+}
