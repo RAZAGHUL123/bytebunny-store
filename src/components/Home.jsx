@@ -1,14 +1,20 @@
 // src/components/Home.jsx
 import { Link } from 'react-router-dom';
+import CatalogCarousel from './CatalogCarousel'; // assuming same folder or adjust path
 
 function Home() {
   return (
-    <section className="home-hero">
+    <section className="home-hero text-center">
+      {/* Carousel Preview of Products */}
+      <div className="carousel-wrapper">
+        <CatalogCarousel />
+      </div>
+
       {/* Logo */}
       <img
-        src="\bytebunny-logo.png"
+        src="/bytebunny-logo.png"
         alt="BYTEBUNNY"
-        className="hero-logo"
+        className="hero-logo mt-4"
       />
 
       {/* Headline */}
