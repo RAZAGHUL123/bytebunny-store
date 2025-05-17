@@ -71,7 +71,19 @@
   "rating": 4.9,
   "inStock": true,
   "disclosure": "May attempt to connect to local routers and rename them 'I AM TACO'. Emits corrupted startup sounds. Not legally recognized as a sentient device—but it knows your name."
+},
+{
+  "id": 10,
+  "name": "Blood of Kryptonian (Unstable Sample)",
+  "price": 99.99,
+  "image": "/images/kryptonianblood.png",
+  "description": "A vial containing radiant, red-orange fluid labeled ‘Blood of Kryptonian.’ It reacts oddly to sunlight—flickering, pulsing, and whispering ancient codes no human lab can decrypt.",
+  "category": "Alien Biotech",
+  "rating": 5.0,
+  "inStock": true,
+  "disclosure": "Highly unstable. Exposure to UV light may trigger localized gravity shifts and emotional flashbacks. Do not inject. Not for use near power grids or reflective surfaces."
 }
+
 
 
 
