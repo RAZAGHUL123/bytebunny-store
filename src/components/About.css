@@ -1,0 +1,57 @@
+/* About.css */
+.container {
+  background-color: #0b0b0b;
+  font-family: 'Orbitron', 'Avenir', sans-serif;
+}
+
+.glitch-title {
+  text-shadow: 0 0 5px red, 0 0 10px darkred;
+  letter-spacing: 2px;
+  animation: glitch-flicker 1.5s infinite;
+}
+
+@keyframes glitch-flicker {
+  0%, 100% { opacity: 1; text-shadow: 0 0 2px red; }
+  20% { opacity: 0.8; text-shadow: 1px 0 red, -1px 0 darkred; }
+  40% { opacity: 1; text-shadow: -1px -1px red, 1px 1px black; }
+  60% { opacity: 0.9; text-shadow: 2px 2px red, -2px -2px black; }
+  80% { opacity: 1; text-shadow: 0 0 3px red; }
+}
+
+.about-intro p {
+  color: #aaa;
+  font-size: 1.1rem;
+  max-width: 750px;
+  margin: auto;
+}
+
+.multiverse-files ul {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.list-group-item {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: monospace;
+  font-size: 0.95rem;
+}
+
+.list-group-item:hover {
+  background-color: #220000;
+  transform: scale(1.01);
+  color: #ff4d4d;
+}
+
+.text-muted {
+  color: #777 !important;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Optional background glitch texture */
+body.about-page {
+  background-image: url('/images/noise.gif');
+  background-size: cover;
+  background-blend-mode: overlay;
+}
