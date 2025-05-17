@@ -19,7 +19,7 @@ export default function Login() {
   return (
     <div className="login-wrapper d-flex align-items-center justify-content-center min-vh-100">
       <div className="login-card p-4 rounded shadow">
-        <h2 className="text-center text-glitch mb-4">BYTEBUNNY.GOV</h2>
+        <h2 className="text-center text-glitch mb-4">BYTEBUNNY.d0z</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label text-muted">Agent Email</label>
