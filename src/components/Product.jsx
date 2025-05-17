@@ -27,11 +27,11 @@ function Product({ onAddToCart }) {
       <div className="row">
         <div className="col-md-6">
           <img
-            src={item.image}
-            alt={item.name}
-            className="img-fluid border border-danger shadow"
-            style={{ maxHeight: '400px', objectFit: 'contain' }}
-          />
+  src={product.image}
+  alt={product.name}
+  className="product-image"
+/>
+
         </div>
         <div className="col-md-6">
           <h2 className="product-title">{item.name}</h2>
