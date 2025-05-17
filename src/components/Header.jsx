@@ -1,67 +1,76 @@
 // src/components/Header.jsx
 import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Header({ cartItems }) {
   const navigate = useNavigate();
-
-  // Check for logged-in user
+  const [expanded, setExpanded] = useState(false);
   const user = JSON.parse(localStorage.getItem('auth'));
+  const cartCount = cartItems?.length || 0;
 
-  // Logout function
   const handleLogout = () => {
     localStorage.removeItem('auth');
     navigate('/');
-    window.location.reload(); // optional full reset
+    window.location.reload();
   };
 
-  const cartCount = cartItems?.length || 0;
-
   return (
-    <header className="bytebunny-nav">
-      {/* Logo & Title back to home */}
-      <div className="nav-left">
-        <Link to="/" className="flex items-center no-underline">
-          <img
-            src="/bytebunny-logo.png"
-            alt="ByteBunny Logo"
-            className="nav-logo"
-          />
-          <h1 className="nav-title">BYTEBUNNY</h1>
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark px-3 fixed-top w-100">
+      <div className="container-fluid">
+        <Link className="navbar-brand d-flex align-items-center" to="/">
+          <img src="/bytebunny-logo.png" alt="ByteBunny Logo" width="40" height="40" className="me-2" />
+          BYTEBUNNY
         </Link>
+
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={() => setExpanded(!expanded)}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className={`collapse navbar-collapse ${expanded ? 'show' : ''}`}>
+          <ul className="navbar-nav ms-auto mb-2 mb-md-0">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/catalog">Catalog</Link>
+            </li>
+            <li className="nav-item position-relative">
+              <Link className="nav-link" to="/cart">
+                Cart {cartCount > 0 && (
+                  <span className="badge bg-danger ms-1">{cartCount}</span>
+                )}
+              </Link>
+            </li>
+            {!user ? (
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/login">Login</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/signup">Sign Up</Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/dashboard">Dashboard</Link>
+                </li>
+                <li className="nav-item">
+                  <button onClick={handleLogout} className="btn btn-link nav-link text-danger p-0">
+                    Logout
+                  </button>
+                </li>
+              </>
+            )}
+          </ul>
+        </div>
       </div>
-
-      {/* Nav links */}
-      <nav className="nav-right">
-        <ul>
-          <li><Link to="/" className="nav-link">Home</Link></li>
-          <li><Link to="/catalog" className="nav-link">Catalog</Link></li>
-          <li className="position-relative">
-            <Link to="/cart" className="nav-link">
-              Cart
-              {cartCount > 0 && (
-                <span className="cart-count">{cartCount}</span>
-              )}
-            </Link>
-          </li>
-
-          {!user ? (
-            <>
-              <li><Link to="/login" className="nav-link">Login</Link></li>
-              <li><Link to="/signup" className="nav-link">Sign Up</Link></li>
-            </>
-          ) : (
-            <>
-              <li><Link to="/dashboard" className="nav-link">Dashboard</Link></li>
-              <li>
-                <button onClick={handleLogout} className="nav-link btn btn-link text-danger p-0">
-                  Logout
-                </button>
-              </li>
-            </>
-          )}
-        </ul>
-      </nav>
-    </header>
+    </nav>
   );
 }
 
