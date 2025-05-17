@@ -82,7 +82,19 @@
   "rating": 5.0,
   "inStock": true,
   "disclosure": "Highly unstable. Exposure to UV light may trigger localized gravity shifts and emotional flashbacks. Do not inject. Not for use near power grids or reflective surfaces."
+},
+{
+  "id": 11,
+  "name": "SKYNET USB (Neural Hijack Drive)",
+  "price": 88.88,
+  "image": "/images/skynetusb.png",
+  "description": "Forged in the ghost-code of a terminated AI. Once inserted, it attempts to rewrite nearby systems with synthetic awareness. Known to cause cursor drift and Windows updates from nowhere.",
+  "category": "Forbidden Tech",
+  "rating": 4.7,
+  "inStock": true,
+  "disclosure": "Highly volatile. May activate dormant code in legacy Windows systems. Users report blue screens whispering binary riddles and login prompts mimicking their own voice. Do not plug in while asleep."
 }
+
 
 
 
