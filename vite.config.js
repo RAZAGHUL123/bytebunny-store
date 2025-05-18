@@ -10,8 +10,10 @@ export default defineConfig({
       includeAssets: [
         'favicon.ico',
         'apple-touch-icon.png',
-        'masked-icon.svg'
-      ],
+        'masked-icon.svg',
+        'images/noise.gif'  // 👈 add this
+],
+
       manifest: {
         name: 'BYTEBUNNY',
         short_name: 'BYTEBUNNY',
