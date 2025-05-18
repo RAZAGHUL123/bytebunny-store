@@ -1,6 +1,6 @@
-/* ------------------ */
-/* BYTEBUNNY THEME LAYER */
-/* ------------------ */
+/* ---------------------------------- */
+/* BYTEBUNNY MASTER THEME + FIX LAYER */
+/* ---------------------------------- */
 
 body {
   background-color: #0b0b0b;
@@ -8,81 +8,42 @@ body {
   font-family: 'Orbitron', 'Avenir', sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.7;
-  display: block;
   min-height: 100vh;
+  line-height: 1.7;
   scroll-behavior: smooth;
 }
 
-/* Custom Header Title Glitch (optional effect) */
-.glitch-text {
-  position: relative;
-  display: inline-block;
+/* Fix content getting chopped under fixed header */
+.page-wrapper {
+  padding-top: 75px;
 }
 
-.glitch-text::before,
-.glitch-text::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: red;
-  z-index: -1;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  animation: glitch 2s infinite linear alternate-reverse;
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding-top: 90px;
+  }
 }
 
-.glitch-text::before {
-  left: 2px;
-  text-shadow: -1px 0 blue;
-}
+/* ========================================= */
+/* === GLOBAL UTILITIES ==================== */
+/* ========================================= */
 
-.glitch-text::after {
-  left: -2px;
-  text-shadow: 1px 0 lime;
-}
-
-@keyframes glitch {
-  0% { clip: rect(0, 900px, 0, 0); }
-  10% { clip: rect(10px, 900px, 50px, 0); }
-  20% { clip: rect(85px, 900px, 140px, 0); }
-  40% { clip: rect(10px, 900px, 110px, 0); }
-  60% { clip: rect(65px, 900px, 190px, 0); }
-  80% { clip: rect(30px, 900px, 90px, 0); }
-  100% { clip: rect(0, 900px, 0, 0); }
-}
-
-/* CTA + Demonic Buttons */
-.btn-demonic {
-  background-color: #8b0000;
-  color: #fff;
-  border: 1px solid crimson;
-  letter-spacing: 0.08em;
-  padding: 0.75rem 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  text-shadow: 0 0 4px red;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
-}
-
-.btn-demonic:hover {
-  background-color: crimson;
-  box-shadow: 0 0 15px red;
-  transform: scale(1.05);
-}
-
-/* Links */
 a {
   color: #ff6666;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
+
 a:hover {
   color: #ff3333;
 }
 
-/* Headings */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
 h1, h2, h3 {
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 0.06em;
@@ -97,129 +58,23 @@ h2 {
   color: #ff4444;
 }
 
-/* Footer */
-footer {
-  background-color: #0a0a0a;
-  color: #777;
-  font-size: 0.85rem;
-  padding: 2rem 1rem;
-  border-top: 1px solid #222;
-  text-align: center;
-}
-/* =============================== */
-/* === BYTEBUNNY HOME THEME ====== */
-/* =============================== */
+/* ========================================= */
+/* === NAVBAR & HEADER ===================== */
+/* ========================================= */
 
-.home-hero {
-  background: radial-gradient(circle, #0b0b0b, #000);
-  color: #e4e4e4;
-  text-align: center;
-  min-height: 100vh;
-  padding: 4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-logo {
-  height: 120px;
-  margin-bottom: 1.5rem;
-  filter: drop-shadow(0 0 8px crimson);
-}
-
-/* Celtic Glitch Title */
-.glitch-title {
-  font-size: 3rem;
-  font-family: 'UnifrakturCook', 'Orbitron', serif;
-  letter-spacing: 0.15em;
-  color: red;
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-.glitch-title::before,
-.glitch-title::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  width: 100%;
-  color: crimson;
-  opacity: 0.7;
-}
-
-.glitch-title::before {
-  top: -2px;
-  left: 2px;
-  color: #ff2222;
-  animation: glitch 2s infinite;
-}
-
-.glitch-title::after {
-  top: 2px;
-  left: -2px;
-  color: #ff6666;
-  animation: glitch 2.5s infinite;
-}
-
-@keyframes glitch {
-  0% { clip-path: inset(0 0 80% 0); }
-  25% { clip-path: inset(20% 0 50% 0); }
-  50% { clip-path: inset(30% 0 30% 0); }
-  75% { clip-path: inset(10% 0 40% 0); }
-  100% { clip-path: inset(0 0 80% 0); }
-}
-
-/* Subtext */
-.hero-subtext {
-  color: #999;
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin-bottom: 2rem;
-  font-family: 'Avenir', sans-serif;
-}
-
-/* CTA Button */
-.btn-demonic-cta {
-  background-color: #8b0000;
-  padding: 0.75rem 2rem;
-  border-radius: 8px;
-  text-transform: uppercase;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  transition: all 0.3s ease;
-  border: 1px solid #ff0033;
-  box-shadow: 0 0 10px #ff0033;
-}
-
-.btn-demonic-cta:hover {
-  background-color: #ff0033;
-  box-shadow: 0 0 20px red;
-  color: #000;
-}
-.bytebunny-nav {
+.bytebunny-nav,
+.navbar {
   background-color: #0b0b0b;
   border-bottom: 1px solid #330000;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
 }
 
-.nav-left {
-  display: flex;
-  align-items: center;
-}
-
+.navbar-brand img,
 .nav-logo {
   height: 40px;
-  margin-right: 1rem;
   filter: drop-shadow(0 0 4px crimson);
 }
 
@@ -230,20 +85,11 @@ footer {
   letter-spacing: 0.1em;
 }
 
-.nav-right ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-}
-
 .nav-link {
   color: #ccc;
-  text-transform: uppercase;
   font-weight: bold;
+  text-transform: uppercase;
   letter-spacing: 0.08em;
-  text-decoration: none;
   position: relative;
   transition: all 0.3s ease;
 }
@@ -270,47 +116,23 @@ footer {
   transform: scaleX(1);
   transform-origin: left;
 }
+
 .btn-link {
   background: none;
   border: none;
   cursor: pointer;
   font-weight: bold;
-  letter-spacing: 0.08em;
-  font-family: inherit;
   text-transform: uppercase;
-  text-decoration: none;
+  color: inherit;
 }
 
 .btn-link:hover {
   color: #ff0033;
   text-shadow: 0 0 5px red;
 }
-.image-wrapper {
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #111;
-}
 
-.product-image {
-  width: 100%;
-  max-width: 400px;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto;
-}
-
-
-
-.product-image:hover {
-  transform: scale(1.05);
-}
-.cart-count {
+.cart-count, 
+.navbar .badge {
   position: absolute;
   top: -8px;
   right: -12px;
@@ -322,14 +144,134 @@ footer {
   font-weight: bold;
   box-shadow: 0 0 5px red;
 }
-/* =============================== */
-/* === PRODUCT PAGE CLEANUP ====== */
-/* =============================== */
+
+/* ========================================= */
+/* === HOME HERO =========================== */
+/* ========================================= */
+
+.home-hero {
+  background: radial-gradient(circle, #0b0b0b, #000);
+  color: #e4e4e4;
+  text-align: center;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo {
+  max-width: 200px;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 8px crimson);
+}
+
+/* ========================================= */
+/* === GLITCH EFFECTS ====================== */
+/* ========================================= */
+
+.glitch-text,
+.glitch-title {
+  position: relative;
+  display: inline-block;
+  color: red;
+  font-family: 'UnifrakturCook', 'Orbitron', serif;
+}
+
+.glitch-title {
+  font-size: 3rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  animation: glitch 1.5s infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after,
+.glitch-title::before,
+.glitch-title::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -1px 0 blue;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: 1px 0 lime;
+}
+
+.glitch-title::before {
+  top: -2px;
+  left: 2px;
+  color: #ff2222;
+  opacity: 0.7;
+  animation: glitch 2s infinite;
+}
+
+.glitch-title::after {
+  top: 2px;
+  left: -2px;
+  color: #ff6666;
+  opacity: 0.7;
+  animation: glitch 2.5s infinite;
+}
+
+@keyframes glitch {
+  0% { clip-path: inset(0 0 80% 0); }
+  25% { clip-path: inset(20% 0 50% 0); }
+  50% { clip-path: inset(30% 0 30% 0); }
+  75% { clip-path: inset(10% 0 40% 0); }
+  100% { clip-path: inset(0 0 80% 0); }
+}
+
+/* ========================================= */
+/* === CTA Buttons ========================= */
+/* ========================================= */
+
+.btn-demonic,
+.btn-demonic-cta {
+  background-color: #8b0000;
+  color: white;
+  border: 1px solid crimson;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+  text-shadow: 0 0 4px red;
+}
+
+.btn-demonic {
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-demonic-cta {
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+}
+
+.btn-demonic:hover,
+.btn-demonic-cta:hover {
+  background-color: crimson;
+  box-shadow: 0 0 15px red;
+  transform: scale(1.05);
+  color: #000;
+}
+
+/* ========================================= */
+/* === PRODUCT PAGE ======================== */
+/* ========================================= */
 
 .product-page {
   background-color: #0b0b0b;
   color: #f1f1f1;
-  font-family: 'Avenir', sans-serif;
   padding: 3rem 2rem;
 }
 
@@ -337,7 +279,6 @@ footer {
   font-size: 2.2rem;
   color: #ff3c3c;
   margin-bottom: 1rem;
-  font-family: 'Orbitron', sans-serif;
   text-shadow: 0 0 3px red;
 }
 
@@ -369,23 +310,45 @@ footer {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   color: #ff6666;
-  font-family: 'Orbitron', sans-serif;
-}
-.hero-logo {
-  max-width: 200px;
-  height: auto;
-  display: block;
-  margin: 1rem auto;
 }
 
-.carousel-wrapper {
-  max-width: 100%;
+/* ========================================= */
+/* === IMAGES ============================== */
+/* ========================================= */
+
+.image-wrapper {
+  width: 100%;
+  height: 220px;
   overflow: hidden;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.glitch-title {
-  font-size: 2rem;
-  color: red;
-  animation: glitch 1.5s infinite;
-  position: relative;
+.product-image {
+  width: 100%;
+  max-width: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+/* ========================================= */
+/* === FOOTER ============================== */
+/* ========================================= */
+
+footer {
+  background-color: #0a0a0a;
+  color: #777;
+  font-size: 0.85rem;
+  padding: 2rem 1rem;
+  border-top: 1px solid #222;
+  text-align: center;
 }
