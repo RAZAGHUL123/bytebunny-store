@@ -1,45 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Reptar Mask (Used)",
-    "price": 44.99,
-    "image": "https://i.imgur.com/yourImage1.png",
-    "description": "Smells like raw plastic and regret. Breathing while wearing it triggers VHS distortion nearby.",
-    "category": "Costume",
-    "rating": 4.8,
-    "inStock": true
-  },
-  {
-    "id": 2,
-    "name": "Courage's Collar (Bloodstained)",
-    "price": 32.00,
-    "image": "https://i.imgur.com/yourImage2.png",
-    "description": "Causes wearer to hear faint screams from the attic when alone.",
-    "category": "Accessory",
-    "rating": 5.0,
-    "inStock": true
-  },
-  {
-    "id": 3,
-    "name": "Teeth Candle",
-    "price": 18.99,
-    "image": "https://i.imgur.com/yourImage3.png",
-    "description": "Made of wax and molars. Weeps during thunderstorms.",
-    "category": "Home Decor",
-    "rating": 4.2,
-    "inStock": true
-  },
-  {
-    "id": 4,
-    "name": "Jawbox Plush",
-    "price": 27.50,
-    "image": "https://i.imgur.com/yourImage4.png",
-    "description": "Its jaw occasionally snaps shut when you're not looking.",
-    "category": "Toys",
-    "rating": 4.6,
-    "inStock": true
-  },
-  {
   "id": 6,
   "name": "Plank of Dread (Possessed)",
   "price": 77.77,
