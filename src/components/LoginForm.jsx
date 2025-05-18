@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.css'; // This should be in src/components/Login.css
-import logo from '../assets/bytebunny-logo.png';
+
 
 export default function LoginForm() {
   const [email, setEmail] = useState('');
@@ -16,7 +16,8 @@ export default function LoginForm() {
     <div className="login-container d-flex justify-content-center align-items-center vh-100">
       <div className="login-card bg-dark text-light p-4 rounded shadow">
         <div className="text-center mb-4">
-          <img src={logo} alt="BYTEBUNNY Logo" className="logo mb-2" />
+          <img src="/images/bytebunny-logo.png" alt="BYTEBUNNY Logo" />
+
           <h2>Welcome to BYTEBUNNY</h2>
         </div>
         <form onSubmit={handleSubmit}>
