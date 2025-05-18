@@ -1,8 +1,7 @@
-// src/components/LoginForm.jsx
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Login.css'; // Create this for custom styles
-import logo from '../assets/bytebunny-logo.png'; // Replace with actual logo path
+import './Login.css'; // This should be in src/components/Login.css
+import logo from '../assets/bytebunny-logo.png';
 
 export default function LoginForm() {
   const [email, setEmail] = useState('');
@@ -10,16 +9,15 @@ export default function LoginForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: Add actual auth logic
     alert(`Logging in as ${email}`);
   };
 
   return (
-    <div className="login-container d-flex justify-content-center align-items-center">
-      <div className="login-card p-4 rounded">
-        <div className="text-center mb-3">
-          <img src={logo} alt="BYTEBUNNY Logo" className="logo" />
-          <h2 className="text-light mt-3">Welcome to BYTEBUNNY</h2>
+    <div className="login-container d-flex justify-content-center align-items-center vh-100">
+      <div className="login-card bg-dark text-light p-4 rounded shadow">
+        <div className="text-center mb-4">
+          <img src={logo} alt="BYTEBUNNY Logo" className="logo mb-2" />
+          <h2>Welcome to BYTEBUNNY</h2>
         </div>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -32,7 +30,7 @@ export default function LoginForm() {
               required
             />
           </div>
-          <div className="mb-3">
+          <div className="mb-4">
             <input
               type="password"
               className="form-control bg-dark text-light border-danger"
@@ -42,7 +40,9 @@ export default function LoginForm() {
               required
             />
           </div>
-          <button type="submit" className="btn btn-danger w-100">Login</button>
+          <button type="submit" className="btn btn-danger w-100">
+            Login
+          </button>
         </form>
       </div>
     </div>
